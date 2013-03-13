@@ -1,0 +1,45 @@
+{
+  "name": "grunt-webmake",
+  "description": "Do webmake",
+  "version": "0.1.0",
+  "homepage": "https://github.com/sakatam/grunt-webmake",
+  "author": {
+    "name": "Makoto Sakata",
+    "email": "maco.sakata@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sakatam/grunt-webmake.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sakatam/grunt-webmake/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/sakatam/grunt-webmake/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt": "~0.4.0"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.0"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "webmake": "~0.3.14"
+  }
+}
