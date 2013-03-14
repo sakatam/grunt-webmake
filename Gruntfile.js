@@ -31,10 +31,18 @@ module.exports = function(grunt) {
     // Configuration to be run (and then tested).
     webmake: {
       default_options: {
-        options: {
-        },
         files: {
           'tmp/compiled.js': ['test/fixtures/index.js'],
+        },
+      },
+      missing_file: {
+        files: {
+          'tmp/missing_file.js': ['test/fixtures/index_missing.js'],
+        },
+      },
+      multiple_entry_files: {
+        files: {
+          'tmp/multiple_entry_files.js': ['test/fixtures/required.js', 'test/fixtures/index.js'],
         },
       },
     },

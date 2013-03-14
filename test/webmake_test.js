@@ -27,11 +27,22 @@ exports.webmake = {
     // setup here if necessary
     done();
   },
+
   default_options: function(test) {
     test.expect(1);
-
     test.equal(grunt.file.exists("tmp/compiled.js"), true, 'should output compiled js file.');
+    test.done();
+  },
 
+  missing_file: function(test) {
+    test.expect(1);
+    test.equal(grunt.file.exists("tmp/missing_file.js"), false, 'should fail if entry file does not exist.');
+    test.done();
+  },
+
+  multiple_entry_files: function(test) {
+    test.expect(1);
+    test.equal(grunt.file.exists("tmp/multiple_entry_files.js"), false, 'should fail if multiple entry files are passed.');
     test.done();
   },
 };

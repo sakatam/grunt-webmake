@@ -13,31 +13,26 @@ module.exports = function(grunt) {
 
     var done = this.async();
     var webmake = require("webmake");
-
-    var options = this.options({
-      punctuation: '.',
-      separator: ', '
-    });
+    var options = this.options();
 
     var iterator = function(file, cb) {
-      if (file.src.length > 1) {
-        grunt.log.warn('Source file "' + file.src + '" cannot be an array.');
+      grunt.log.writeln('Processing "' + file.src + '".');
+
+      if (file.src.length !== 1) {
+        grunt.log.error('Please specify single entry file. "' + file.src + '"');
         return cb();
       }
 
       var path = file.src[0];
-      if (!grunt.file.exists(path)) {
-        grunt.log.warn('Source file "' + path + '" not found.');
-        return cb();
-      }
-
-      webmake(path, function(err, compiled) {
+      webmake(path, options, function(err, compiled) {
         if (err) {
           grunt.log.error('Error on webmaking "' + path + '": ' + err);
           return cb(err);
         }
+
         grunt.file.write(file.dest, compiled);
-        grunt.log.writeln('File "' + file.dest + '" created.');
+        grunt.log.ok('File "' + file.dest + '" is created.');
+
         cb();
       });
     };
