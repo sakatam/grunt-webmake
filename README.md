@@ -1,6 +1,6 @@
-# webmake
+# grunt-webmake [![Build Status](https://travis-ci.org/sakatam/grunt-webmake.png)](https://travis-ci.org/sakatam/grunt-webmake)
 
-> Do webmake
+> Do webmake via grunt
 
 ## Getting Started
 This plugin requires Grunt `~0.4.0`
