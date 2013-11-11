@@ -14,7 +14,7 @@ npm install grunt-webmake --save-dev
 One the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('webmake');
+grunt.loadNpmTasks('grunt-webmake');
 ```
 
 ## The "webmake" task
