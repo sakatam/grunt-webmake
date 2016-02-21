@@ -34,10 +34,11 @@
     "grunt": "~0.4.0"
   },
   "peerDependencies": {
-    "grunt": "~0.4.0"
+    "grunt": ">=0.4.0"
   },
   "keywords": [
-    "gruntplugin", "webmake"
+    "gruntplugin",
+    "webmake"
   ],
   "dependencies": {
     "webmake": "~0.3.14"
